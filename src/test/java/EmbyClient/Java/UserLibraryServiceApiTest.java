@@ -6,7 +6,7 @@
 package EmbyClient.Java;
 
 import io.swagger.client.model.BaseItemDto;
-import io.swagger.client.model.QueryResultBaseItemDto;
+import io.swagger.client.model.QueryResultBaseItemRespDto;
 import io.swagger.client.model.UserItemDataDto;
 import io.swagger.client.model.UserLibraryLeaveSharedItems;
 import io.swagger.client.model.UserLibraryUpdateUserItemAccess;
@@ -14,10 +14,7 @@ import org.junit.Test;
 import org.junit.Ignore;
 
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 
 /**
@@ -108,7 +105,7 @@ public class UserLibraryServiceApiTest {
         Integer imageTypeLimit = null;
         String enableImageTypes = null;
         Boolean enableUserData = null;
-        QueryResultBaseItemDto response = api.getUsersByUseridItemsByIdIntros(userId, id, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
+        QueryResultBaseItemRespDto response = api.getUsersByUseridItemsByIdIntros(userId, id, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
 
         // TODO: test validations
     }
@@ -213,7 +210,7 @@ public class UserLibraryServiceApiTest {
         Integer imageTypeLimit = null;
         String enableImageTypes = null;
         Boolean enableUserData = null;
-        QueryResultBaseItemDto response = api.getVideosByIdAdditionalparts(id, userId, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
+        QueryResultBaseItemRespDto response = api.getVideosByIdAdditionalparts(id, userId, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
 
         // TODO: test validations
     }

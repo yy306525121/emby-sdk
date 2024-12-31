@@ -19,7 +19,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import io.swagger.client.model.QueryResultBaseItemDto;
+import io.swagger.client.model.QueryResultBaseItemRespDto;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -148,8 +148,8 @@ public class ChannelServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Gets available channels Documentation</a>
      */
-    public QueryResultBaseItemDto getChannels(String userId, Integer startIndex, String fields, Integer limit, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
-        ApiResponse<QueryResultBaseItemDto> resp = getChannelsWithHttpInfo(userId, startIndex, fields, limit, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
+    public QueryResultBaseItemRespDto getChannels(String userId, Integer startIndex, String fields, Integer limit, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
+        ApiResponse<QueryResultBaseItemRespDto> resp = getChannelsWithHttpInfo(userId, startIndex, fields, limit, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
         return resp.getData();
     }
 
@@ -169,9 +169,9 @@ public class ChannelServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Gets available channels Documentation</a>
      */
-    public ApiResponse<QueryResultBaseItemDto> getChannelsWithHttpInfo(String userId, Integer startIndex, String fields, Integer limit, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
+    public ApiResponse<QueryResultBaseItemRespDto> getChannelsWithHttpInfo(String userId, Integer startIndex, String fields, Integer limit, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
         com.squareup.okhttp.Call call = getChannelsValidateBeforeCall(userId, startIndex, fields, limit, enableImages, imageTypeLimit, enableImageTypes, enableUserData, null, null);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -192,7 +192,7 @@ public class ChannelServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Gets available channels Documentation</a>
      */
-    public com.squareup.okhttp.Call getChannelsAsync(String userId, Integer startIndex, String fields, Integer limit, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
+    public com.squareup.okhttp.Call getChannelsAsync(String userId, Integer startIndex, String fields, Integer limit, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ApiCallback<QueryResultBaseItemRespDto> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -214,7 +214,7 @@ public class ChannelServiceApi {
         }
 
         com.squareup.okhttp.Call call = getChannelsValidateBeforeCall(userId, startIndex, fields, limit, enableImages, imageTypeLimit, enableImageTypes, enableUserData, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

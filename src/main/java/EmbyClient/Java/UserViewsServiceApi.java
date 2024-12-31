@@ -19,7 +19,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import io.swagger.client.model.QueryResultBaseItemDto;
+import io.swagger.client.model.QueryResultBaseItemRespDto;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -131,8 +131,8 @@ public class UserViewsServiceApi {
      * API Documentation: Browsing the Library
      * @see <a href="https://dev.emby.media/doc/restapi/Browsing-the-Library.html"> Documentation</a>
      */
-    public QueryResultBaseItemDto getUsersByUseridViews(String userId, Boolean includeExternalContent) throws ApiException {
-        ApiResponse<QueryResultBaseItemDto> resp = getUsersByUseridViewsWithHttpInfo(userId, includeExternalContent);
+    public QueryResultBaseItemRespDto getUsersByUseridViews(String userId, Boolean includeExternalContent) throws ApiException {
+        ApiResponse<QueryResultBaseItemRespDto> resp = getUsersByUseridViewsWithHttpInfo(userId, includeExternalContent);
         return resp.getData();
     }
 
@@ -146,9 +146,9 @@ public class UserViewsServiceApi {
      * API Documentation: Browsing the Library
      * @see <a href="https://dev.emby.media/doc/restapi/Browsing-the-Library.html"> Documentation</a>
      */
-    public ApiResponse<QueryResultBaseItemDto> getUsersByUseridViewsWithHttpInfo(String userId, Boolean includeExternalContent) throws ApiException {
+    public ApiResponse<QueryResultBaseItemRespDto> getUsersByUseridViewsWithHttpInfo(String userId, Boolean includeExternalContent) throws ApiException {
         com.squareup.okhttp.Call call = getUsersByUseridViewsValidateBeforeCall(userId, includeExternalContent, null, null);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -163,7 +163,7 @@ public class UserViewsServiceApi {
      * API Documentation: Browsing the Library
      * @see <a href="https://dev.emby.media/doc/restapi/Browsing-the-Library.html"> Documentation</a>
      */
-    public com.squareup.okhttp.Call getUsersByUseridViewsAsync(String userId, Boolean includeExternalContent, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
+    public com.squareup.okhttp.Call getUsersByUseridViewsAsync(String userId, Boolean includeExternalContent, final ApiCallback<QueryResultBaseItemRespDto> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -185,7 +185,7 @@ public class UserViewsServiceApi {
         }
 
         com.squareup.okhttp.Call call = getUsersByUseridViewsValidateBeforeCall(userId, includeExternalContent, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

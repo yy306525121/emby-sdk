@@ -7,15 +7,9 @@ package EmbyClient.Java;
 
 import io.swagger.client.model.PlaylistsAddToPlaylistResult;
 import io.swagger.client.model.PlaylistsPlaylistCreationResult;
-import io.swagger.client.model.QueryResultBaseItemDto;
+import io.swagger.client.model.QueryResultBaseItemRespDto;
 import org.junit.Test;
 import org.junit.Ignore;
-
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 
 /**
@@ -78,7 +72,7 @@ public class PlaylistServiceApiTest {
         Boolean enableUserData = null;
         Integer imageTypeLimit = null;
         String enableImageTypes = null;
-        QueryResultBaseItemDto response = api.getPlaylistsByIdItems(id, userId, startIndex, limit, fields, enableImages, enableUserData, imageTypeLimit, enableImageTypes);
+        QueryResultBaseItemRespDto response = api.getPlaylistsByIdItems(id, userId, startIndex, limit, fields, enableImages, enableUserData, imageTypeLimit, enableImageTypes);
 
         // TODO: test validations
     }

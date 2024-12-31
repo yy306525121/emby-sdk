@@ -21,7 +21,7 @@ import java.io.IOException;
 
 import io.swagger.client.model.PlaylistsAddToPlaylistResult;
 import io.swagger.client.model.PlaylistsPlaylistCreationResult;
-import io.swagger.client.model.QueryResultBaseItemDto;
+import io.swagger.client.model.QueryResultBaseItemRespDto;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -429,8 +429,8 @@ public class PlaylistServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Gets the original items of a playlist Documentation</a>
      */
-    public QueryResultBaseItemDto getPlaylistsByIdItems(String id, String userId, Integer startIndex, Integer limit, String fields, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes) throws ApiException {
-        ApiResponse<QueryResultBaseItemDto> resp = getPlaylistsByIdItemsWithHttpInfo(id, userId, startIndex, limit, fields, enableImages, enableUserData, imageTypeLimit, enableImageTypes);
+    public QueryResultBaseItemRespDto getPlaylistsByIdItems(String id, String userId, Integer startIndex, Integer limit, String fields, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes) throws ApiException {
+        ApiResponse<QueryResultBaseItemRespDto> resp = getPlaylistsByIdItemsWithHttpInfo(id, userId, startIndex, limit, fields, enableImages, enableUserData, imageTypeLimit, enableImageTypes);
         return resp.getData();
     }
 
@@ -451,9 +451,9 @@ public class PlaylistServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Gets the original items of a playlist Documentation</a>
      */
-    public ApiResponse<QueryResultBaseItemDto> getPlaylistsByIdItemsWithHttpInfo(String id, String userId, Integer startIndex, Integer limit, String fields, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes) throws ApiException {
+    public ApiResponse<QueryResultBaseItemRespDto> getPlaylistsByIdItemsWithHttpInfo(String id, String userId, Integer startIndex, Integer limit, String fields, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes) throws ApiException {
         com.squareup.okhttp.Call call = getPlaylistsByIdItemsValidateBeforeCall(id, userId, startIndex, limit, fields, enableImages, enableUserData, imageTypeLimit, enableImageTypes, null, null);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -475,7 +475,7 @@ public class PlaylistServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Gets the original items of a playlist Documentation</a>
      */
-    public com.squareup.okhttp.Call getPlaylistsByIdItemsAsync(String id, String userId, Integer startIndex, Integer limit, String fields, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
+    public com.squareup.okhttp.Call getPlaylistsByIdItemsAsync(String id, String userId, Integer startIndex, Integer limit, String fields, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, final ApiCallback<QueryResultBaseItemRespDto> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -497,7 +497,7 @@ public class PlaylistServiceApi {
         }
 
         com.squareup.okhttp.Call call = getPlaylistsByIdItemsValidateBeforeCall(id, userId, startIndex, limit, fields, enableImages, enableUserData, imageTypeLimit, enableImageTypes, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

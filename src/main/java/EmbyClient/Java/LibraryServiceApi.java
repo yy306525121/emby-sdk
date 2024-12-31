@@ -27,7 +27,7 @@ import io.swagger.client.model.LibraryLibraryOptionsResult;
 import io.swagger.client.model.LibraryMediaFolder;
 import io.swagger.client.model.LibraryPostUpdatedMedia;
 import io.swagger.client.model.PersistenceIntroDebugInfo;
-import io.swagger.client.model.QueryResultBaseItemDto;
+import io.swagger.client.model.QueryResultBaseItemRespDto;
 import io.swagger.client.model.ThemeMediaResult;
 
 import java.lang.reflect.Type;
@@ -407,8 +407,8 @@ public class LibraryServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Finds albums similar to a given album. Documentation</a>
      */
-    public QueryResultBaseItemDto getAlbumsByIdSimilar(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
-        ApiResponse<QueryResultBaseItemDto> resp = getAlbumsByIdSimilarWithHttpInfo(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
+    public QueryResultBaseItemRespDto getAlbumsByIdSimilar(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
+        ApiResponse<QueryResultBaseItemRespDto> resp = getAlbumsByIdSimilarWithHttpInfo(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
         return resp.getData();
     }
 
@@ -429,9 +429,9 @@ public class LibraryServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Finds albums similar to a given album. Documentation</a>
      */
-    public ApiResponse<QueryResultBaseItemDto> getAlbumsByIdSimilarWithHttpInfo(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
+    public ApiResponse<QueryResultBaseItemRespDto> getAlbumsByIdSimilarWithHttpInfo(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
         com.squareup.okhttp.Call call = getAlbumsByIdSimilarValidateBeforeCall(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields, null, null);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -453,7 +453,7 @@ public class LibraryServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Finds albums similar to a given album. Documentation</a>
      */
-    public com.squareup.okhttp.Call getAlbumsByIdSimilarAsync(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
+    public com.squareup.okhttp.Call getAlbumsByIdSimilarAsync(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields, final ApiCallback<QueryResultBaseItemRespDto> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -475,7 +475,7 @@ public class LibraryServiceApi {
         }
 
         com.squareup.okhttp.Call call = getAlbumsByIdSimilarValidateBeforeCall(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -588,8 +588,8 @@ public class LibraryServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Finds albums similar to a given album. Documentation</a>
      */
-    public QueryResultBaseItemDto getArtistsByIdSimilar(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
-        ApiResponse<QueryResultBaseItemDto> resp = getArtistsByIdSimilarWithHttpInfo(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
+    public QueryResultBaseItemRespDto getArtistsByIdSimilar(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
+        ApiResponse<QueryResultBaseItemRespDto> resp = getArtistsByIdSimilarWithHttpInfo(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
         return resp.getData();
     }
 
@@ -610,9 +610,9 @@ public class LibraryServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Finds albums similar to a given album. Documentation</a>
      */
-    public ApiResponse<QueryResultBaseItemDto> getArtistsByIdSimilarWithHttpInfo(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
+    public ApiResponse<QueryResultBaseItemRespDto> getArtistsByIdSimilarWithHttpInfo(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
         com.squareup.okhttp.Call call = getArtistsByIdSimilarValidateBeforeCall(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields, null, null);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -634,7 +634,7 @@ public class LibraryServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Finds albums similar to a given album. Documentation</a>
      */
-    public com.squareup.okhttp.Call getArtistsByIdSimilarAsync(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
+    public com.squareup.okhttp.Call getArtistsByIdSimilarAsync(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields, final ApiCallback<QueryResultBaseItemRespDto> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -656,7 +656,7 @@ public class LibraryServiceApi {
         }
 
         com.squareup.okhttp.Call call = getArtistsByIdSimilarValidateBeforeCall(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -769,8 +769,8 @@ public class LibraryServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Finds games similar to a given game. Documentation</a>
      */
-    public QueryResultBaseItemDto getGamesByIdSimilar(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
-        ApiResponse<QueryResultBaseItemDto> resp = getGamesByIdSimilarWithHttpInfo(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
+    public QueryResultBaseItemRespDto getGamesByIdSimilar(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
+        ApiResponse<QueryResultBaseItemRespDto> resp = getGamesByIdSimilarWithHttpInfo(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
         return resp.getData();
     }
 
@@ -791,9 +791,9 @@ public class LibraryServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Finds games similar to a given game. Documentation</a>
      */
-    public ApiResponse<QueryResultBaseItemDto> getGamesByIdSimilarWithHttpInfo(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
+    public ApiResponse<QueryResultBaseItemRespDto> getGamesByIdSimilarWithHttpInfo(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
         com.squareup.okhttp.Call call = getGamesByIdSimilarValidateBeforeCall(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields, null, null);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -815,7 +815,7 @@ public class LibraryServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Finds games similar to a given game. Documentation</a>
      */
-    public com.squareup.okhttp.Call getGamesByIdSimilarAsync(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
+    public com.squareup.okhttp.Call getGamesByIdSimilarAsync(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields, final ApiCallback<QueryResultBaseItemRespDto> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -837,7 +837,7 @@ public class LibraryServiceApi {
         }
 
         com.squareup.okhttp.Call call = getGamesByIdSimilarValidateBeforeCall(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -1065,8 +1065,8 @@ public class LibraryServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Gets critic reviews for an item Documentation</a>
      */
-    public QueryResultBaseItemDto getItemsByIdCriticreviews(String id, Integer startIndex, Integer limit) throws ApiException {
-        ApiResponse<QueryResultBaseItemDto> resp = getItemsByIdCriticreviewsWithHttpInfo(id, startIndex, limit);
+    public QueryResultBaseItemRespDto getItemsByIdCriticreviews(String id, Integer startIndex, Integer limit) throws ApiException {
+        ApiResponse<QueryResultBaseItemRespDto> resp = getItemsByIdCriticreviewsWithHttpInfo(id, startIndex, limit);
         return resp.getData();
     }
 
@@ -1081,9 +1081,9 @@ public class LibraryServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Gets critic reviews for an item Documentation</a>
      */
-    public ApiResponse<QueryResultBaseItemDto> getItemsByIdCriticreviewsWithHttpInfo(String id, Integer startIndex, Integer limit) throws ApiException {
+    public ApiResponse<QueryResultBaseItemRespDto> getItemsByIdCriticreviewsWithHttpInfo(String id, Integer startIndex, Integer limit) throws ApiException {
         com.squareup.okhttp.Call call = getItemsByIdCriticreviewsValidateBeforeCall(id, startIndex, limit, null, null);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -1099,7 +1099,7 @@ public class LibraryServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Gets critic reviews for an item Documentation</a>
      */
-    public com.squareup.okhttp.Call getItemsByIdCriticreviewsAsync(String id, Integer startIndex, Integer limit, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
+    public com.squareup.okhttp.Call getItemsByIdCriticreviewsAsync(String id, Integer startIndex, Integer limit, final ApiCallback<QueryResultBaseItemRespDto> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1121,7 +1121,7 @@ public class LibraryServiceApi {
         }
 
         com.squareup.okhttp.Call call = getItemsByIdCriticreviewsValidateBeforeCall(id, startIndex, limit, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -1601,8 +1601,8 @@ public class LibraryServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Gets similar items Documentation</a>
      */
-    public QueryResultBaseItemDto getItemsByIdSimilar(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
-        ApiResponse<QueryResultBaseItemDto> resp = getItemsByIdSimilarWithHttpInfo(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
+    public QueryResultBaseItemRespDto getItemsByIdSimilar(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
+        ApiResponse<QueryResultBaseItemRespDto> resp = getItemsByIdSimilarWithHttpInfo(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
         return resp.getData();
     }
 
@@ -1623,9 +1623,9 @@ public class LibraryServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Gets similar items Documentation</a>
      */
-    public ApiResponse<QueryResultBaseItemDto> getItemsByIdSimilarWithHttpInfo(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
+    public ApiResponse<QueryResultBaseItemRespDto> getItemsByIdSimilarWithHttpInfo(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
         com.squareup.okhttp.Call call = getItemsByIdSimilarValidateBeforeCall(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields, null, null);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -1647,7 +1647,7 @@ public class LibraryServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Gets similar items Documentation</a>
      */
-    public com.squareup.okhttp.Call getItemsByIdSimilarAsync(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
+    public com.squareup.okhttp.Call getItemsByIdSimilarAsync(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields, final ApiCallback<QueryResultBaseItemRespDto> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1669,7 +1669,7 @@ public class LibraryServiceApi {
         }
 
         com.squareup.okhttp.Call call = getItemsByIdSimilarValidateBeforeCall(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -2608,8 +2608,8 @@ public class LibraryServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Gets all user media folders. Documentation</a>
      */
-    public QueryResultBaseItemDto getLibraryMediafolders(Boolean isHidden) throws ApiException {
-        ApiResponse<QueryResultBaseItemDto> resp = getLibraryMediafoldersWithHttpInfo(isHidden);
+    public QueryResultBaseItemRespDto getLibraryMediafolders(Boolean isHidden) throws ApiException {
+        ApiResponse<QueryResultBaseItemRespDto> resp = getLibraryMediafoldersWithHttpInfo(isHidden);
         return resp.getData();
     }
 
@@ -2622,9 +2622,9 @@ public class LibraryServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Gets all user media folders. Documentation</a>
      */
-    public ApiResponse<QueryResultBaseItemDto> getLibraryMediafoldersWithHttpInfo(Boolean isHidden) throws ApiException {
+    public ApiResponse<QueryResultBaseItemRespDto> getLibraryMediafoldersWithHttpInfo(Boolean isHidden) throws ApiException {
         com.squareup.okhttp.Call call = getLibraryMediafoldersValidateBeforeCall(isHidden, null, null);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -2638,7 +2638,7 @@ public class LibraryServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Gets all user media folders. Documentation</a>
      */
-    public com.squareup.okhttp.Call getLibraryMediafoldersAsync(Boolean isHidden, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
+    public com.squareup.okhttp.Call getLibraryMediafoldersAsync(Boolean isHidden, final ApiCallback<QueryResultBaseItemRespDto> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -2660,7 +2660,7 @@ public class LibraryServiceApi {
         }
 
         com.squareup.okhttp.Call call = getLibraryMediafoldersValidateBeforeCall(isHidden, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -3005,8 +3005,8 @@ public class LibraryServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Finds movies and trailers similar to a given movie. Documentation</a>
      */
-    public QueryResultBaseItemDto getMoviesByIdSimilar(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
-        ApiResponse<QueryResultBaseItemDto> resp = getMoviesByIdSimilarWithHttpInfo(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
+    public QueryResultBaseItemRespDto getMoviesByIdSimilar(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
+        ApiResponse<QueryResultBaseItemRespDto> resp = getMoviesByIdSimilarWithHttpInfo(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
         return resp.getData();
     }
 
@@ -3027,9 +3027,9 @@ public class LibraryServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Finds movies and trailers similar to a given movie. Documentation</a>
      */
-    public ApiResponse<QueryResultBaseItemDto> getMoviesByIdSimilarWithHttpInfo(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
+    public ApiResponse<QueryResultBaseItemRespDto> getMoviesByIdSimilarWithHttpInfo(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
         com.squareup.okhttp.Call call = getMoviesByIdSimilarValidateBeforeCall(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields, null, null);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -3051,7 +3051,7 @@ public class LibraryServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Finds movies and trailers similar to a given movie. Documentation</a>
      */
-    public com.squareup.okhttp.Call getMoviesByIdSimilarAsync(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
+    public com.squareup.okhttp.Call getMoviesByIdSimilarAsync(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields, final ApiCallback<QueryResultBaseItemRespDto> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -3073,7 +3073,7 @@ public class LibraryServiceApi {
         }
 
         com.squareup.okhttp.Call call = getMoviesByIdSimilarValidateBeforeCall(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -3186,8 +3186,8 @@ public class LibraryServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Finds tv shows similar to a given one. Documentation</a>
      */
-    public QueryResultBaseItemDto getShowsByIdSimilar(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
-        ApiResponse<QueryResultBaseItemDto> resp = getShowsByIdSimilarWithHttpInfo(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
+    public QueryResultBaseItemRespDto getShowsByIdSimilar(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
+        ApiResponse<QueryResultBaseItemRespDto> resp = getShowsByIdSimilarWithHttpInfo(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
         return resp.getData();
     }
 
@@ -3208,9 +3208,9 @@ public class LibraryServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Finds tv shows similar to a given one. Documentation</a>
      */
-    public ApiResponse<QueryResultBaseItemDto> getShowsByIdSimilarWithHttpInfo(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
+    public ApiResponse<QueryResultBaseItemRespDto> getShowsByIdSimilarWithHttpInfo(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
         com.squareup.okhttp.Call call = getShowsByIdSimilarValidateBeforeCall(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields, null, null);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -3232,7 +3232,7 @@ public class LibraryServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Finds tv shows similar to a given one. Documentation</a>
      */
-    public com.squareup.okhttp.Call getShowsByIdSimilarAsync(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
+    public com.squareup.okhttp.Call getShowsByIdSimilarAsync(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields, final ApiCallback<QueryResultBaseItemRespDto> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -3254,7 +3254,7 @@ public class LibraryServiceApi {
         }
 
         com.squareup.okhttp.Call call = getShowsByIdSimilarValidateBeforeCall(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -3367,8 +3367,8 @@ public class LibraryServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Finds movies and trailers similar to a given trailer. Documentation</a>
      */
-    public QueryResultBaseItemDto getTrailersByIdSimilar(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
-        ApiResponse<QueryResultBaseItemDto> resp = getTrailersByIdSimilarWithHttpInfo(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
+    public QueryResultBaseItemRespDto getTrailersByIdSimilar(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
+        ApiResponse<QueryResultBaseItemRespDto> resp = getTrailersByIdSimilarWithHttpInfo(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
         return resp.getData();
     }
 
@@ -3389,9 +3389,9 @@ public class LibraryServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Finds movies and trailers similar to a given trailer. Documentation</a>
      */
-    public ApiResponse<QueryResultBaseItemDto> getTrailersByIdSimilarWithHttpInfo(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
+    public ApiResponse<QueryResultBaseItemRespDto> getTrailersByIdSimilarWithHttpInfo(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
         com.squareup.okhttp.Call call = getTrailersByIdSimilarValidateBeforeCall(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields, null, null);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -3413,7 +3413,7 @@ public class LibraryServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Finds movies and trailers similar to a given trailer. Documentation</a>
      */
-    public com.squareup.okhttp.Call getTrailersByIdSimilarAsync(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
+    public com.squareup.okhttp.Call getTrailersByIdSimilarAsync(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields, final ApiCallback<QueryResultBaseItemRespDto> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -3435,7 +3435,7 @@ public class LibraryServiceApi {
         }
 
         com.squareup.okhttp.Call call = getTrailersByIdSimilarValidateBeforeCall(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

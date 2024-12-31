@@ -6,15 +6,10 @@
 package io.swagger.client.model;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.client.model.BaseItemDto;
 import io.swagger.v3.oas.annotations.media.Schema;
-import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
 /**
@@ -22,19 +17,19 @@ import java.util.List;
  */
 
 
-public class QueryResultBaseItemDto {
+public class QueryResultBaseItemRespDto {
   @SerializedName("Items")
   private List<BaseItemDto> items = null;
 
   @SerializedName("TotalRecordCount")
   private Integer totalRecordCount = null;
 
-  public QueryResultBaseItemDto items(List<BaseItemDto> items) {
+  public QueryResultBaseItemRespDto items(List<BaseItemDto> items) {
     this.items = items;
     return this;
   }
 
-  public QueryResultBaseItemDto addItemsItem(BaseItemDto itemsItem) {
+  public QueryResultBaseItemRespDto addItemsItem(BaseItemDto itemsItem) {
     if (this.items == null) {
       this.items = new ArrayList<BaseItemDto>();
     }
@@ -55,7 +50,7 @@ public class QueryResultBaseItemDto {
     this.items = items;
   }
 
-  public QueryResultBaseItemDto totalRecordCount(Integer totalRecordCount) {
+  public QueryResultBaseItemRespDto totalRecordCount(Integer totalRecordCount) {
     this.totalRecordCount = totalRecordCount;
     return this;
   }
@@ -82,7 +77,7 @@ public class QueryResultBaseItemDto {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    QueryResultBaseItemDto queryResultBaseItemDto = (QueryResultBaseItemDto) o;
+    QueryResultBaseItemRespDto queryResultBaseItemDto = (QueryResultBaseItemRespDto) o;
     return Objects.equals(this.items, queryResultBaseItemDto.items) &&
         Objects.equals(this.totalRecordCount, queryResultBaseItemDto.totalRecordCount);
   }

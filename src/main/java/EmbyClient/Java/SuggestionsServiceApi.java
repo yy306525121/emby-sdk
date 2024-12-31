@@ -19,7 +19,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import io.swagger.client.model.QueryResultBaseItemDto;
+import io.swagger.client.model.QueryResultBaseItemRespDto;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -143,8 +143,8 @@ public class SuggestionsServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Gets items based on a query. Documentation</a>
      */
-    public QueryResultBaseItemDto getUsersByUseridSuggestions(String userId, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
-        ApiResponse<QueryResultBaseItemDto> resp = getUsersByUseridSuggestionsWithHttpInfo(userId, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
+    public QueryResultBaseItemRespDto getUsersByUseridSuggestions(String userId, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
+        ApiResponse<QueryResultBaseItemRespDto> resp = getUsersByUseridSuggestionsWithHttpInfo(userId, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
         return resp.getData();
     }
 
@@ -162,9 +162,9 @@ public class SuggestionsServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Gets items based on a query. Documentation</a>
      */
-    public ApiResponse<QueryResultBaseItemDto> getUsersByUseridSuggestionsWithHttpInfo(String userId, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
+    public ApiResponse<QueryResultBaseItemRespDto> getUsersByUseridSuggestionsWithHttpInfo(String userId, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
         com.squareup.okhttp.Call call = getUsersByUseridSuggestionsValidateBeforeCall(userId, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData, null, null);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -183,7 +183,7 @@ public class SuggestionsServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Gets items based on a query. Documentation</a>
      */
-    public com.squareup.okhttp.Call getUsersByUseridSuggestionsAsync(String userId, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
+    public com.squareup.okhttp.Call getUsersByUseridSuggestionsAsync(String userId, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ApiCallback<QueryResultBaseItemRespDto> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -205,7 +205,7 @@ public class SuggestionsServiceApi {
         }
 
         com.squareup.okhttp.Call call = getUsersByUseridSuggestionsValidateBeforeCall(userId, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

@@ -19,7 +19,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import io.swagger.client.model.QueryResultBaseItemDto;
+import io.swagger.client.model.QueryResultBaseItemRespDto;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -880,8 +880,8 @@ public class TvShowsServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Gets seasons for a tv series Documentation</a>
      */
-    public QueryResultBaseItemDto getShowsByIdSeasons(String userId, String id, String fields, Boolean isSpecialSeason, String adjacentTo, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
-        ApiResponse<QueryResultBaseItemDto> resp = getShowsByIdSeasonsWithHttpInfo(userId, id, fields, isSpecialSeason, adjacentTo, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
+    public QueryResultBaseItemRespDto getShowsByIdSeasons(String userId, String id, String fields, Boolean isSpecialSeason, String adjacentTo, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
+        ApiResponse<QueryResultBaseItemRespDto> resp = getShowsByIdSeasonsWithHttpInfo(userId, id, fields, isSpecialSeason, adjacentTo, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
         return resp.getData();
     }
 
@@ -902,9 +902,9 @@ public class TvShowsServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Gets seasons for a tv series Documentation</a>
      */
-    public ApiResponse<QueryResultBaseItemDto> getShowsByIdSeasonsWithHttpInfo(String userId, String id, String fields, Boolean isSpecialSeason, String adjacentTo, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
+    public ApiResponse<QueryResultBaseItemRespDto> getShowsByIdSeasonsWithHttpInfo(String userId, String id, String fields, Boolean isSpecialSeason, String adjacentTo, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
         com.squareup.okhttp.Call call = getShowsByIdSeasonsValidateBeforeCall(userId, id, fields, isSpecialSeason, adjacentTo, enableImages, imageTypeLimit, enableImageTypes, enableUserData, null, null);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -926,7 +926,7 @@ public class TvShowsServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Gets seasons for a tv series Documentation</a>
      */
-    public com.squareup.okhttp.Call getShowsByIdSeasonsAsync(String userId, String id, String fields, Boolean isSpecialSeason, String adjacentTo, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
+    public com.squareup.okhttp.Call getShowsByIdSeasonsAsync(String userId, String id, String fields, Boolean isSpecialSeason, String adjacentTo, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ApiCallback<QueryResultBaseItemRespDto> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -948,7 +948,7 @@ public class TvShowsServiceApi {
         }
 
         com.squareup.okhttp.Call call = getShowsByIdSeasonsValidateBeforeCall(userId, id, fields, isSpecialSeason, adjacentTo, enableImages, imageTypeLimit, enableImageTypes, enableUserData, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -1760,8 +1760,8 @@ public class TvShowsServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Gets a list of next up episodes Documentation</a>
      */
-    public QueryResultBaseItemDto getShowsNextup(String userId, Integer startIndex, Integer limit, String fields, String seriesId, String parentId, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
-        ApiResponse<QueryResultBaseItemDto> resp = getShowsNextupWithHttpInfo(userId, startIndex, limit, fields, seriesId, parentId, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
+    public QueryResultBaseItemRespDto getShowsNextup(String userId, Integer startIndex, Integer limit, String fields, String seriesId, String parentId, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
+        ApiResponse<QueryResultBaseItemRespDto> resp = getShowsNextupWithHttpInfo(userId, startIndex, limit, fields, seriesId, parentId, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
         return resp.getData();
     }
 
@@ -1783,9 +1783,9 @@ public class TvShowsServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Gets a list of next up episodes Documentation</a>
      */
-    public ApiResponse<QueryResultBaseItemDto> getShowsNextupWithHttpInfo(String userId, Integer startIndex, Integer limit, String fields, String seriesId, String parentId, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
+    public ApiResponse<QueryResultBaseItemRespDto> getShowsNextupWithHttpInfo(String userId, Integer startIndex, Integer limit, String fields, String seriesId, String parentId, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
         com.squareup.okhttp.Call call = getShowsNextupValidateBeforeCall(userId, startIndex, limit, fields, seriesId, parentId, enableImages, imageTypeLimit, enableImageTypes, enableUserData, null, null);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -1808,7 +1808,7 @@ public class TvShowsServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Gets a list of next up episodes Documentation</a>
      */
-    public com.squareup.okhttp.Call getShowsNextupAsync(String userId, Integer startIndex, Integer limit, String fields, String seriesId, String parentId, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
+    public com.squareup.okhttp.Call getShowsNextupAsync(String userId, Integer startIndex, Integer limit, String fields, String seriesId, String parentId, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ApiCallback<QueryResultBaseItemRespDto> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1830,7 +1830,7 @@ public class TvShowsServiceApi {
         }
 
         com.squareup.okhttp.Call call = getShowsNextupValidateBeforeCall(userId, startIndex, limit, fields, seriesId, parentId, enableImages, imageTypeLimit, enableImageTypes, enableUserData, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

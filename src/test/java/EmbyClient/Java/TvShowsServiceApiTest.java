@@ -5,15 +5,9 @@
 
 package EmbyClient.Java;
 
-import io.swagger.client.model.QueryResultBaseItemDto;
+import io.swagger.client.model.QueryResultBaseItemRespDto;
 import org.junit.Test;
 import org.junit.Ignore;
-
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 
 /**
@@ -158,7 +152,7 @@ public class TvShowsServiceApiTest {
         Integer imageTypeLimit = null;
         String enableImageTypes = null;
         Boolean enableUserData = null;
-        QueryResultBaseItemDto response = api.getShowsByIdSeasons(userId, id, fields, isSpecialSeason, adjacentTo, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
+        QueryResultBaseItemRespDto response = api.getShowsByIdSeasons(userId, id, fields, isSpecialSeason, adjacentTo, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
 
         // TODO: test validations
     }
@@ -293,7 +287,7 @@ public class TvShowsServiceApiTest {
         Integer imageTypeLimit = null;
         String enableImageTypes = null;
         Boolean enableUserData = null;
-        QueryResultBaseItemDto response = api.getShowsNextup(userId, startIndex, limit, fields, seriesId, parentId, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
+        QueryResultBaseItemRespDto response = api.getShowsNextup(userId, startIndex, limit, fields, seriesId, parentId, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
 
         // TODO: test validations
     }

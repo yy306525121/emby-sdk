@@ -5,15 +5,9 @@
 
 package EmbyClient.Java;
 
-import io.swagger.client.model.QueryResultBaseItemDto;
+import io.swagger.client.model.QueryResultBaseItemRespDto;
 import org.junit.Test;
 import org.junit.Ignore;
-
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 
 /**
@@ -42,7 +36,7 @@ public class ChannelServiceApiTest {
         Integer imageTypeLimit = null;
         String enableImageTypes = null;
         Boolean enableUserData = null;
-        QueryResultBaseItemDto response = api.getChannels(userId, startIndex, fields, limit, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
+        QueryResultBaseItemRespDto response = api.getChannels(userId, startIndex, fields, limit, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
 
         // TODO: test validations
     }

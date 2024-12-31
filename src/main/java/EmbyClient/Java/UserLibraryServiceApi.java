@@ -20,7 +20,7 @@ import java.io.IOException;
 
 
 import io.swagger.client.model.BaseItemDto;
-import io.swagger.client.model.QueryResultBaseItemDto;
+import io.swagger.client.model.QueryResultBaseItemRespDto;
 import io.swagger.client.model.UserItemDataDto;
 import io.swagger.client.model.UserLibraryLeaveSharedItems;
 import io.swagger.client.model.UserLibraryUpdateUserItemAccess;
@@ -697,8 +697,8 @@ public class UserLibraryServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Gets intros to play before the main media item plays Documentation</a>
      */
-    public QueryResultBaseItemDto getUsersByUseridItemsByIdIntros(String userId, String id, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
-        ApiResponse<QueryResultBaseItemDto> resp = getUsersByUseridItemsByIdIntrosWithHttpInfo(userId, id, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
+    public QueryResultBaseItemRespDto getUsersByUseridItemsByIdIntros(String userId, String id, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
+        ApiResponse<QueryResultBaseItemRespDto> resp = getUsersByUseridItemsByIdIntrosWithHttpInfo(userId, id, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
         return resp.getData();
     }
 
@@ -717,9 +717,9 @@ public class UserLibraryServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Gets intros to play before the main media item plays Documentation</a>
      */
-    public ApiResponse<QueryResultBaseItemDto> getUsersByUseridItemsByIdIntrosWithHttpInfo(String userId, String id, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
+    public ApiResponse<QueryResultBaseItemRespDto> getUsersByUseridItemsByIdIntrosWithHttpInfo(String userId, String id, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
         com.squareup.okhttp.Call call = getUsersByUseridItemsByIdIntrosValidateBeforeCall(userId, id, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData, null, null);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -739,7 +739,7 @@ public class UserLibraryServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Gets intros to play before the main media item plays Documentation</a>
      */
-    public com.squareup.okhttp.Call getUsersByUseridItemsByIdIntrosAsync(String userId, String id, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
+    public com.squareup.okhttp.Call getUsersByUseridItemsByIdIntrosAsync(String userId, String id, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ApiCallback<QueryResultBaseItemRespDto> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -761,7 +761,7 @@ public class UserLibraryServiceApi {
         }
 
         com.squareup.okhttp.Call call = getUsersByUseridItemsByIdIntrosValidateBeforeCall(userId, id, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -1548,8 +1548,8 @@ public class UserLibraryServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Gets additional parts for a video. Documentation</a>
      */
-    public QueryResultBaseItemDto getVideosByIdAdditionalparts(String id, String userId, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
-        ApiResponse<QueryResultBaseItemDto> resp = getVideosByIdAdditionalpartsWithHttpInfo(id, userId, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
+    public QueryResultBaseItemRespDto getVideosByIdAdditionalparts(String id, String userId, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
+        ApiResponse<QueryResultBaseItemRespDto> resp = getVideosByIdAdditionalpartsWithHttpInfo(id, userId, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
         return resp.getData();
     }
 
@@ -1568,9 +1568,9 @@ public class UserLibraryServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Gets additional parts for a video. Documentation</a>
      */
-    public ApiResponse<QueryResultBaseItemDto> getVideosByIdAdditionalpartsWithHttpInfo(String id, String userId, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
+    public ApiResponse<QueryResultBaseItemRespDto> getVideosByIdAdditionalpartsWithHttpInfo(String id, String userId, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
         com.squareup.okhttp.Call call = getVideosByIdAdditionalpartsValidateBeforeCall(id, userId, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData, null, null);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -1590,7 +1590,7 @@ public class UserLibraryServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Gets additional parts for a video. Documentation</a>
      */
-    public com.squareup.okhttp.Call getVideosByIdAdditionalpartsAsync(String id, String userId, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
+    public com.squareup.okhttp.Call getVideosByIdAdditionalpartsAsync(String id, String userId, String fields, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ApiCallback<QueryResultBaseItemRespDto> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1612,7 +1612,7 @@ public class UserLibraryServiceApi {
         }
 
         com.squareup.okhttp.Call call = getVideosByIdAdditionalpartsValidateBeforeCall(id, userId, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

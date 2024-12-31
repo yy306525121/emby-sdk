@@ -26,7 +26,7 @@ import io.swagger.client.model.PlayCommand;
 import io.swagger.client.model.PlayRequest;
 import io.swagger.client.model.PlaystateCommand;
 import io.swagger.client.model.PlaystateRequest;
-import io.swagger.client.model.QueryResultBaseItemDto;
+import io.swagger.client.model.QueryResultBaseItemRespDto;
 import io.swagger.client.model.SessionSessionInfo;
 
 import java.lang.reflect.Type;
@@ -757,8 +757,8 @@ public class SessionsServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Gets a the current play queue from a session Documentation</a>
      */
-    public QueryResultBaseItemDto getSessionsPlayqueue(String id, String deviceId) throws ApiException {
-        ApiResponse<QueryResultBaseItemDto> resp = getSessionsPlayqueueWithHttpInfo(id, deviceId);
+    public QueryResultBaseItemRespDto getSessionsPlayqueue(String id, String deviceId) throws ApiException {
+        ApiResponse<QueryResultBaseItemRespDto> resp = getSessionsPlayqueueWithHttpInfo(id, deviceId);
         return resp.getData();
     }
 
@@ -772,9 +772,9 @@ public class SessionsServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Gets a the current play queue from a session Documentation</a>
      */
-    public ApiResponse<QueryResultBaseItemDto> getSessionsPlayqueueWithHttpInfo(String id, String deviceId) throws ApiException {
+    public ApiResponse<QueryResultBaseItemRespDto> getSessionsPlayqueueWithHttpInfo(String id, String deviceId) throws ApiException {
         com.squareup.okhttp.Call call = getSessionsPlayqueueValidateBeforeCall(id, deviceId, null, null);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -789,7 +789,7 @@ public class SessionsServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Gets a the current play queue from a session Documentation</a>
      */
-    public com.squareup.okhttp.Call getSessionsPlayqueueAsync(String id, String deviceId, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
+    public com.squareup.okhttp.Call getSessionsPlayqueueAsync(String id, String deviceId, final ApiCallback<QueryResultBaseItemRespDto> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -811,7 +811,7 @@ public class SessionsServiceApi {
         }
 
         com.squareup.okhttp.Call call = getSessionsPlayqueueValidateBeforeCall(id, deviceId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

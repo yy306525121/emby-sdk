@@ -5,15 +5,9 @@
 
 package EmbyClient.Java;
 
-import io.swagger.client.model.QueryResultBaseItemDto;
+import io.swagger.client.model.QueryResultBaseItemRespDto;
 import org.junit.Test;
 import org.junit.Ignore;
-
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 
 /**
@@ -36,7 +30,7 @@ public class UserViewsServiceApiTest {
     public void getUsersByUseridViewsTest() throws Exception {
         String userId = null;
         Boolean includeExternalContent = null;
-        QueryResultBaseItemDto response = api.getUsersByUseridViews(userId, includeExternalContent);
+        QueryResultBaseItemRespDto response = api.getUsersByUseridViews(userId, includeExternalContent);
 
         // TODO: test validations
     }

@@ -5,15 +5,9 @@
 
 package EmbyClient.Java;
 
-import io.swagger.client.model.QueryResultBaseItemDto;
+import io.swagger.client.model.QueryResultBaseItemRespDto;
 import org.junit.Test;
 import org.junit.Ignore;
-
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 
 /**
@@ -43,7 +37,7 @@ public class InstantMixServiceApiTest {
         String userId = null;
         Integer limit = null;
         String fields = null;
-        QueryResultBaseItemDto response = api.getAlbumsByIdInstantmix(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
+        QueryResultBaseItemRespDto response = api.getAlbumsByIdInstantmix(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
 
         // TODO: test validations
     }
@@ -65,7 +59,7 @@ public class InstantMixServiceApiTest {
         String userId = null;
         Integer limit = null;
         String fields = null;
-        QueryResultBaseItemDto response = api.getArtistsInstantmix(includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
+        QueryResultBaseItemRespDto response = api.getArtistsInstantmix(includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
 
         // TODO: test validations
     }
@@ -89,7 +83,7 @@ public class InstantMixServiceApiTest {
         Integer imageTypeLimit = null;
         String enableImageTypes = null;
         Boolean enableUserData = null;
-        QueryResultBaseItemDto response = api.getAudiobooksNextup(userId, startIndex, limit, fields, albumId, parentId, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
+        QueryResultBaseItemRespDto response = api.getAudiobooksNextup(userId, startIndex, limit, fields, albumId, parentId, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
 
         // TODO: test validations
     }
@@ -112,7 +106,7 @@ public class InstantMixServiceApiTest {
         String userId = null;
         Integer limit = null;
         String fields = null;
-        QueryResultBaseItemDto response = api.getItemsByIdInstantmix(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
+        QueryResultBaseItemRespDto response = api.getItemsByIdInstantmix(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
 
         // TODO: test validations
     }
@@ -135,7 +129,7 @@ public class InstantMixServiceApiTest {
         String userId = null;
         Integer limit = null;
         String fields = null;
-        QueryResultBaseItemDto response = api.getMusicgenresByNameInstantmix(name, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
+        QueryResultBaseItemRespDto response = api.getMusicgenresByNameInstantmix(name, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
 
         // TODO: test validations
     }
@@ -157,7 +151,7 @@ public class InstantMixServiceApiTest {
         String userId = null;
         Integer limit = null;
         String fields = null;
-        QueryResultBaseItemDto response = api.getMusicgenresInstantmix(includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
+        QueryResultBaseItemRespDto response = api.getMusicgenresInstantmix(includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
 
         // TODO: test validations
     }
@@ -180,7 +174,7 @@ public class InstantMixServiceApiTest {
         String userId = null;
         Integer limit = null;
         String fields = null;
-        QueryResultBaseItemDto response = api.getPlaylistsByIdInstantmix(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
+        QueryResultBaseItemRespDto response = api.getPlaylistsByIdInstantmix(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
 
         // TODO: test validations
     }
@@ -203,7 +197,7 @@ public class InstantMixServiceApiTest {
         String userId = null;
         Integer limit = null;
         String fields = null;
-        QueryResultBaseItemDto response = api.getSongsByIdInstantmix(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
+        QueryResultBaseItemRespDto response = api.getSongsByIdInstantmix(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
 
         // TODO: test validations
     }

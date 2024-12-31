@@ -19,7 +19,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import io.swagger.client.model.QueryResultBaseItemDto;
+import io.swagger.client.model.QueryResultBaseItemRespDto;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -155,8 +155,8 @@ public class InstantMixServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Creates an instant playlist based on a given album Documentation</a>
      */
-    public QueryResultBaseItemDto getAlbumsByIdInstantmix(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
-        ApiResponse<QueryResultBaseItemDto> resp = getAlbumsByIdInstantmixWithHttpInfo(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
+    public QueryResultBaseItemRespDto getAlbumsByIdInstantmix(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
+        ApiResponse<QueryResultBaseItemRespDto> resp = getAlbumsByIdInstantmixWithHttpInfo(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
         return resp.getData();
     }
 
@@ -177,9 +177,9 @@ public class InstantMixServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Creates an instant playlist based on a given album Documentation</a>
      */
-    public ApiResponse<QueryResultBaseItemDto> getAlbumsByIdInstantmixWithHttpInfo(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
+    public ApiResponse<QueryResultBaseItemRespDto> getAlbumsByIdInstantmixWithHttpInfo(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
         com.squareup.okhttp.Call call = getAlbumsByIdInstantmixValidateBeforeCall(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields, null, null);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -201,7 +201,7 @@ public class InstantMixServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Creates an instant playlist based on a given album Documentation</a>
      */
-    public com.squareup.okhttp.Call getAlbumsByIdInstantmixAsync(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
+    public com.squareup.okhttp.Call getAlbumsByIdInstantmixAsync(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields, final ApiCallback<QueryResultBaseItemRespDto> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -223,7 +223,7 @@ public class InstantMixServiceApi {
         }
 
         com.squareup.okhttp.Call call = getAlbumsByIdInstantmixValidateBeforeCall(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -329,8 +329,8 @@ public class InstantMixServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Creates an instant playlist based on a given artist Documentation</a>
      */
-    public QueryResultBaseItemDto getArtistsInstantmix(String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
-        ApiResponse<QueryResultBaseItemDto> resp = getArtistsInstantmixWithHttpInfo(includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
+    public QueryResultBaseItemRespDto getArtistsInstantmix(String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
+        ApiResponse<QueryResultBaseItemRespDto> resp = getArtistsInstantmixWithHttpInfo(includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
         return resp.getData();
     }
 
@@ -350,9 +350,9 @@ public class InstantMixServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Creates an instant playlist based on a given artist Documentation</a>
      */
-    public ApiResponse<QueryResultBaseItemDto> getArtistsInstantmixWithHttpInfo(String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
+    public ApiResponse<QueryResultBaseItemRespDto> getArtistsInstantmixWithHttpInfo(String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
         com.squareup.okhttp.Call call = getArtistsInstantmixValidateBeforeCall(includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields, null, null);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -373,7 +373,7 @@ public class InstantMixServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Creates an instant playlist based on a given artist Documentation</a>
      */
-    public com.squareup.okhttp.Call getArtistsInstantmixAsync(String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
+    public com.squareup.okhttp.Call getArtistsInstantmixAsync(String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields, final ApiCallback<QueryResultBaseItemRespDto> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -395,7 +395,7 @@ public class InstantMixServiceApi {
         }
 
         com.squareup.okhttp.Call call = getArtistsInstantmixValidateBeforeCall(includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -513,8 +513,8 @@ public class InstantMixServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Gets a list of next up episodes Documentation</a>
      */
-    public QueryResultBaseItemDto getAudiobooksNextup(String userId, Integer startIndex, Integer limit, String fields, String albumId, String parentId, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
-        ApiResponse<QueryResultBaseItemDto> resp = getAudiobooksNextupWithHttpInfo(userId, startIndex, limit, fields, albumId, parentId, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
+    public QueryResultBaseItemRespDto getAudiobooksNextup(String userId, Integer startIndex, Integer limit, String fields, String albumId, String parentId, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
+        ApiResponse<QueryResultBaseItemRespDto> resp = getAudiobooksNextupWithHttpInfo(userId, startIndex, limit, fields, albumId, parentId, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
         return resp.getData();
     }
 
@@ -536,9 +536,9 @@ public class InstantMixServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Gets a list of next up episodes Documentation</a>
      */
-    public ApiResponse<QueryResultBaseItemDto> getAudiobooksNextupWithHttpInfo(String userId, Integer startIndex, Integer limit, String fields, String albumId, String parentId, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
+    public ApiResponse<QueryResultBaseItemRespDto> getAudiobooksNextupWithHttpInfo(String userId, Integer startIndex, Integer limit, String fields, String albumId, String parentId, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
         com.squareup.okhttp.Call call = getAudiobooksNextupValidateBeforeCall(userId, startIndex, limit, fields, albumId, parentId, enableImages, imageTypeLimit, enableImageTypes, enableUserData, null, null);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -561,7 +561,7 @@ public class InstantMixServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Gets a list of next up episodes Documentation</a>
      */
-    public com.squareup.okhttp.Call getAudiobooksNextupAsync(String userId, Integer startIndex, Integer limit, String fields, String albumId, String parentId, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
+    public com.squareup.okhttp.Call getAudiobooksNextupAsync(String userId, Integer startIndex, Integer limit, String fields, String albumId, String parentId, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ApiCallback<QueryResultBaseItemRespDto> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -583,7 +583,7 @@ public class InstantMixServiceApi {
         }
 
         com.squareup.okhttp.Call call = getAudiobooksNextupValidateBeforeCall(userId, startIndex, limit, fields, albumId, parentId, enableImages, imageTypeLimit, enableImageTypes, enableUserData, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -696,8 +696,8 @@ public class InstantMixServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Creates an instant playlist based on a given item Documentation</a>
      */
-    public QueryResultBaseItemDto getItemsByIdInstantmix(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
-        ApiResponse<QueryResultBaseItemDto> resp = getItemsByIdInstantmixWithHttpInfo(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
+    public QueryResultBaseItemRespDto getItemsByIdInstantmix(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
+        ApiResponse<QueryResultBaseItemRespDto> resp = getItemsByIdInstantmixWithHttpInfo(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
         return resp.getData();
     }
 
@@ -718,9 +718,9 @@ public class InstantMixServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Creates an instant playlist based on a given item Documentation</a>
      */
-    public ApiResponse<QueryResultBaseItemDto> getItemsByIdInstantmixWithHttpInfo(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
+    public ApiResponse<QueryResultBaseItemRespDto> getItemsByIdInstantmixWithHttpInfo(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
         com.squareup.okhttp.Call call = getItemsByIdInstantmixValidateBeforeCall(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields, null, null);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -742,7 +742,7 @@ public class InstantMixServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Creates an instant playlist based on a given item Documentation</a>
      */
-    public com.squareup.okhttp.Call getItemsByIdInstantmixAsync(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
+    public com.squareup.okhttp.Call getItemsByIdInstantmixAsync(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields, final ApiCallback<QueryResultBaseItemRespDto> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -764,7 +764,7 @@ public class InstantMixServiceApi {
         }
 
         com.squareup.okhttp.Call call = getItemsByIdInstantmixValidateBeforeCall(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -877,8 +877,8 @@ public class InstantMixServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Creates an instant playlist based on a music genre Documentation</a>
      */
-    public QueryResultBaseItemDto getMusicgenresByNameInstantmix(String name, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
-        ApiResponse<QueryResultBaseItemDto> resp = getMusicgenresByNameInstantmixWithHttpInfo(name, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
+    public QueryResultBaseItemRespDto getMusicgenresByNameInstantmix(String name, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
+        ApiResponse<QueryResultBaseItemRespDto> resp = getMusicgenresByNameInstantmixWithHttpInfo(name, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
         return resp.getData();
     }
 
@@ -899,9 +899,9 @@ public class InstantMixServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Creates an instant playlist based on a music genre Documentation</a>
      */
-    public ApiResponse<QueryResultBaseItemDto> getMusicgenresByNameInstantmixWithHttpInfo(String name, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
+    public ApiResponse<QueryResultBaseItemRespDto> getMusicgenresByNameInstantmixWithHttpInfo(String name, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
         com.squareup.okhttp.Call call = getMusicgenresByNameInstantmixValidateBeforeCall(name, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields, null, null);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -923,7 +923,7 @@ public class InstantMixServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Creates an instant playlist based on a music genre Documentation</a>
      */
-    public com.squareup.okhttp.Call getMusicgenresByNameInstantmixAsync(String name, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
+    public com.squareup.okhttp.Call getMusicgenresByNameInstantmixAsync(String name, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields, final ApiCallback<QueryResultBaseItemRespDto> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -945,7 +945,7 @@ public class InstantMixServiceApi {
         }
 
         com.squareup.okhttp.Call call = getMusicgenresByNameInstantmixValidateBeforeCall(name, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -1051,8 +1051,8 @@ public class InstantMixServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Creates an instant playlist based on a music genre Documentation</a>
      */
-    public QueryResultBaseItemDto getMusicgenresInstantmix(String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
-        ApiResponse<QueryResultBaseItemDto> resp = getMusicgenresInstantmixWithHttpInfo(includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
+    public QueryResultBaseItemRespDto getMusicgenresInstantmix(String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
+        ApiResponse<QueryResultBaseItemRespDto> resp = getMusicgenresInstantmixWithHttpInfo(includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
         return resp.getData();
     }
 
@@ -1072,9 +1072,9 @@ public class InstantMixServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Creates an instant playlist based on a music genre Documentation</a>
      */
-    public ApiResponse<QueryResultBaseItemDto> getMusicgenresInstantmixWithHttpInfo(String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
+    public ApiResponse<QueryResultBaseItemRespDto> getMusicgenresInstantmixWithHttpInfo(String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
         com.squareup.okhttp.Call call = getMusicgenresInstantmixValidateBeforeCall(includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields, null, null);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -1095,7 +1095,7 @@ public class InstantMixServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Creates an instant playlist based on a music genre Documentation</a>
      */
-    public com.squareup.okhttp.Call getMusicgenresInstantmixAsync(String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
+    public com.squareup.okhttp.Call getMusicgenresInstantmixAsync(String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields, final ApiCallback<QueryResultBaseItemRespDto> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1117,7 +1117,7 @@ public class InstantMixServiceApi {
         }
 
         com.squareup.okhttp.Call call = getMusicgenresInstantmixValidateBeforeCall(includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -1230,8 +1230,8 @@ public class InstantMixServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Creates an instant playlist based on a given playlist Documentation</a>
      */
-    public QueryResultBaseItemDto getPlaylistsByIdInstantmix(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
-        ApiResponse<QueryResultBaseItemDto> resp = getPlaylistsByIdInstantmixWithHttpInfo(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
+    public QueryResultBaseItemRespDto getPlaylistsByIdInstantmix(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
+        ApiResponse<QueryResultBaseItemRespDto> resp = getPlaylistsByIdInstantmixWithHttpInfo(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
         return resp.getData();
     }
 
@@ -1252,9 +1252,9 @@ public class InstantMixServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Creates an instant playlist based on a given playlist Documentation</a>
      */
-    public ApiResponse<QueryResultBaseItemDto> getPlaylistsByIdInstantmixWithHttpInfo(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
+    public ApiResponse<QueryResultBaseItemRespDto> getPlaylistsByIdInstantmixWithHttpInfo(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
         com.squareup.okhttp.Call call = getPlaylistsByIdInstantmixValidateBeforeCall(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields, null, null);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -1276,7 +1276,7 @@ public class InstantMixServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Creates an instant playlist based on a given playlist Documentation</a>
      */
-    public com.squareup.okhttp.Call getPlaylistsByIdInstantmixAsync(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
+    public com.squareup.okhttp.Call getPlaylistsByIdInstantmixAsync(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields, final ApiCallback<QueryResultBaseItemRespDto> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1298,7 +1298,7 @@ public class InstantMixServiceApi {
         }
 
         com.squareup.okhttp.Call call = getPlaylistsByIdInstantmixValidateBeforeCall(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -1411,8 +1411,8 @@ public class InstantMixServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Creates an instant playlist based on a given song Documentation</a>
      */
-    public QueryResultBaseItemDto getSongsByIdInstantmix(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
-        ApiResponse<QueryResultBaseItemDto> resp = getSongsByIdInstantmixWithHttpInfo(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
+    public QueryResultBaseItemRespDto getSongsByIdInstantmix(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
+        ApiResponse<QueryResultBaseItemRespDto> resp = getSongsByIdInstantmixWithHttpInfo(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
         return resp.getData();
     }
 
@@ -1433,9 +1433,9 @@ public class InstantMixServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Creates an instant playlist based on a given song Documentation</a>
      */
-    public ApiResponse<QueryResultBaseItemDto> getSongsByIdInstantmixWithHttpInfo(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
+    public ApiResponse<QueryResultBaseItemRespDto> getSongsByIdInstantmixWithHttpInfo(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
         com.squareup.okhttp.Call call = getSongsByIdInstantmixValidateBeforeCall(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields, null, null);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -1457,7 +1457,7 @@ public class InstantMixServiceApi {
      * API Documentation: Item Information
      * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Creates an instant playlist based on a given song Documentation</a>
      */
-    public com.squareup.okhttp.Call getSongsByIdInstantmixAsync(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
+    public com.squareup.okhttp.Call getSongsByIdInstantmixAsync(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields, final ApiCallback<QueryResultBaseItemRespDto> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1479,7 +1479,7 @@ public class InstantMixServiceApi {
         }
 
         com.squareup.okhttp.Call call = getSongsByIdInstantmixValidateBeforeCall(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<QueryResultBaseItemDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultBaseItemRespDto>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

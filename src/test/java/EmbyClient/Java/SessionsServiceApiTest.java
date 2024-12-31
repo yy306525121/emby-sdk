@@ -12,16 +12,13 @@ import io.swagger.client.model.PlayCommand;
 import io.swagger.client.model.PlayRequest;
 import io.swagger.client.model.PlaystateCommand;
 import io.swagger.client.model.PlaystateRequest;
-import io.swagger.client.model.QueryResultBaseItemDto;
+import io.swagger.client.model.QueryResultBaseItemRespDto;
 import io.swagger.client.model.SessionSessionInfo;
 import org.junit.Test;
 import org.junit.Ignore;
 
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 
 /**
@@ -122,7 +119,7 @@ public class SessionsServiceApiTest {
     public void getSessionsPlayqueueTest() throws Exception {
         String id = null;
         String deviceId = null;
-        QueryResultBaseItemDto response = api.getSessionsPlayqueue(id, deviceId);
+        QueryResultBaseItemRespDto response = api.getSessionsPlayqueue(id, deviceId);
 
         // TODO: test validations
     }

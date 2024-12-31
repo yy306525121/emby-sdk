@@ -13,16 +13,13 @@ import io.swagger.client.model.LibraryLibraryOptionsResult;
 import io.swagger.client.model.LibraryMediaFolder;
 import io.swagger.client.model.LibraryPostUpdatedMedia;
 import io.swagger.client.model.PersistenceIntroDebugInfo;
-import io.swagger.client.model.QueryResultBaseItemDto;
+import io.swagger.client.model.QueryResultBaseItemRespDto;
 import io.swagger.client.model.ThemeMediaResult;
 import org.junit.Test;
 import org.junit.Ignore;
 
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 
 /**
@@ -82,7 +79,7 @@ public class LibraryServiceApiTest {
         String userId = null;
         Integer limit = null;
         String fields = null;
-        QueryResultBaseItemDto response = api.getAlbumsByIdSimilar(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
+        QueryResultBaseItemRespDto response = api.getAlbumsByIdSimilar(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
 
         // TODO: test validations
     }
@@ -105,7 +102,7 @@ public class LibraryServiceApiTest {
         String userId = null;
         Integer limit = null;
         String fields = null;
-        QueryResultBaseItemDto response = api.getArtistsByIdSimilar(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
+        QueryResultBaseItemRespDto response = api.getArtistsByIdSimilar(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
 
         // TODO: test validations
     }
@@ -128,7 +125,7 @@ public class LibraryServiceApiTest {
         String userId = null;
         Integer limit = null;
         String fields = null;
-        QueryResultBaseItemDto response = api.getGamesByIdSimilar(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
+        QueryResultBaseItemRespDto response = api.getGamesByIdSimilar(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
 
         // TODO: test validations
     }
@@ -161,7 +158,7 @@ public class LibraryServiceApiTest {
         String id = null;
         Integer startIndex = null;
         Integer limit = null;
-        QueryResultBaseItemDto response = api.getItemsByIdCriticreviews(id, startIndex, limit);
+        QueryResultBaseItemRespDto response = api.getItemsByIdCriticreviews(id, startIndex, limit);
 
         // TODO: test validations
     }
@@ -229,7 +226,7 @@ public class LibraryServiceApiTest {
         String userId = null;
         Integer limit = null;
         String fields = null;
-        QueryResultBaseItemDto response = api.getItemsByIdSimilar(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
+        QueryResultBaseItemRespDto response = api.getItemsByIdSimilar(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
 
         // TODO: test validations
     }
@@ -354,7 +351,7 @@ public class LibraryServiceApiTest {
     @Test
     public void getLibraryMediafoldersTest() throws Exception {
         Boolean isHidden = null;
-        QueryResultBaseItemDto response = api.getLibraryMediafolders(isHidden);
+        QueryResultBaseItemRespDto response = api.getLibraryMediafolders(isHidden);
 
         // TODO: test validations
     }
@@ -405,7 +402,7 @@ public class LibraryServiceApiTest {
         String userId = null;
         Integer limit = null;
         String fields = null;
-        QueryResultBaseItemDto response = api.getMoviesByIdSimilar(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
+        QueryResultBaseItemRespDto response = api.getMoviesByIdSimilar(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
 
         // TODO: test validations
     }
@@ -428,7 +425,7 @@ public class LibraryServiceApiTest {
         String userId = null;
         Integer limit = null;
         String fields = null;
-        QueryResultBaseItemDto response = api.getShowsByIdSimilar(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
+        QueryResultBaseItemRespDto response = api.getShowsByIdSimilar(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
 
         // TODO: test validations
     }
@@ -451,7 +448,7 @@ public class LibraryServiceApiTest {
         String userId = null;
         Integer limit = null;
         String fields = null;
-        QueryResultBaseItemDto response = api.getTrailersByIdSimilar(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
+        QueryResultBaseItemRespDto response = api.getTrailersByIdSimilar(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
 
         // TODO: test validations
     }
